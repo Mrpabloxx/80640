@@ -1,0 +1,21 @@
+#sp2{
+    color: crimson;
+}
+
+#sp1{
+    margin:  100px;
+    padding: 100px;
+    color: blue;
+ 
+}
+p,span{
+    color: greenyellow;
+}
+
+.fuente{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+span::after{
+    content: "XXXXX"'\A'; white-space:pre;
+}
