@@ -1,0 +1,149 @@
+ht¿Cómo puedo crear un div dentro de otro div y que este se posicione en el medio?
+
+El div que quiero poner es el #left y el #right Adjunto imagen:
+
+introducir la descripción de la imagen aquí
+
+mi código actual es este:
+
+body {
+  background: #232323;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  background: #02ff06;
+  margin: 0;
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 1.1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#colorToGuess {
+  font-size: 200%;
+}
+
+.square {
+  width: 30%;
+  background: purple;
+  padding-bottom: 30%;
+  float: left;
+  margin: 1.66%;
+  border-radius: 15%;
+  transition: background 0.6s;
+  -webkit-transition: background 0.6s;
+  -moz-transition: background 0.6s;
+}
+
+.colorContainer {
+  width: 50%;
+  margin: 5% auto;
+}
+
+.square:hover {
+  box-shadow: 0 0 3px white;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+}
+
+#stripe {
+  background: white;
+  text-align: center;
+  height: 30px;
+  width: 100%;
+}
+
+.selected {
+  background: #02ff06;
+  color: white;
+}
+
+button {
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  height: 100%;
+  font-weight: 700;
+  color: #02ff06;
+  letter-spacing: 1px;
+  font-size: inherit;
+  outline: none !important;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+}
+
+button:hover {
+  color: white;
+  background-color: #02ff06;
+}
+
+#msg {
+  text-transform: uppercase;
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+}
+
+#left {
+  float: left;
+  width: 25%;
+  height: 100%;
+}
+
+#right {
+  float: right;
+  width: 25%;
+}
+
+.counter {
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  background-color: red;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>RGB Guessing Game</title>
+  <link rel="stylesheet" href="RGBGuess.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+
+<body>
+  <h1>THE GREAT
+    <br>
+    <span id="colorToGuess">Color</span>
+    <br> Guessing Game</h1>
+  <div id="stripe">
+    <button id="reset">New Colors</button>
+    <span id="msg"></span>
+    <button id="easyBtn">Easy</button>
+    <button id="hardBtn" class="selected">Hard</button>
+  </div>
+  <div id="left">
+    <div class="counter">
+      <span>0</span>
+    </div>
+  </div>
+  <div id="right"></div>
+  <div class="colorContainer">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+  </div>
+  <script src="RGBGuess.js"></script>
+</body>
+
+</html>
